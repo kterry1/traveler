@@ -1,0 +1,103 @@
+$background-color: #d5e1e5;
+$primary-font-color: #463c74;
+$primary-font-color-hover: #463c74b4;
+$white: #fff;
+$primary-font: "'Baloo Bhaina 2'", cursive;
+$secondary-font: "'Abhaya Libre'", serif;
+$heading-font-size: 74px;
+$primary-font-size: 24px;
+$margin-xtra-light: 1rem;
+$margin-light: 1.5rem;
+$margin-medium: 2rem;
+$margin-heavy: 2.5rem;
+$padding-xtra-light: 0.5rem;
+$padding-light: 1rem;
+$padding-medium: 2rem;
+$padding-heavy: 3rem;
+$padding-xtra-heavy: 4rem;
+$primary-button-color: #fb6434;
+$primary-button-color-hover: #fb6132b4;
+
+body {
+  background-color: #{$background-color};
+  padding: #{$padding-light} 6rem;
+}
+
+nav {
+  width: 50vw;
+  position: fixed;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style: none;
+    padding-inline-start: 0;
+
+    li {
+      padding: 0 #{$padding-heavy} 0 0;
+      font-family: #{$secondary-font};
+      color: #{$primary-font-color};
+
+      &:hover {
+        color: #{$primary-font-color-hover};
+        cursor: pointer;
+      }
+    }
+  }
+}
+main {
+  .homepage_illustration {
+    position: relative;
+    top: 6rem;
+  }
+
+  .homepage_design {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+
+  h1 {
+    font-family: #{$primary-font};
+    font-size: #{$heading-font-size};
+    color: #{$primary-font-color};
+    margin: #{$margin-medium} #{$margin-medium} 0 0;
+    padding: #{$padding-medium} 0 0 0;
+  }
+
+  .homepage_desc {
+    position: relative;
+    bottom: 2rem;
+    font-family: #{$primary-font};
+    font-size: #{$primary-font-size};
+    color: #{$primary-font-color};
+    margin: 0;
+  }
+
+  button {
+    background-color: #{$primary-button-color};
+    width: 280px;
+    color: #{$white};
+    border: none;
+    text-align: center;
+    padding: #{$padding-light} #{$padding-xtra-heavy};
+    font-family: #{$secondary-font};
+    font-size: #{$primary-font-size};
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    &:hover {
+      background-color: #{$primary-button-color-hover};
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width: 1325px) {
+    .homepage_design {
+      position: fixed;
+      top: 0;
+      right: calc(93vw - 1225px);
+      height: 100%;
+      z-index: -1;
+    }
+  }
+}
